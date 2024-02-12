@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+osutools = {file = ".", editable = true}
+ossapi = "*"
+
+[requires]
+python_version = "3.11"
+
+[dev-packages]
+black = "*"
+flake8 = "*"
+
+[scripts]
+song-downloader = "python scripts/songdownloader.py"
+format-fix = "python -m black --preview --enable-unstable-feature string_processing ."
